@@ -5,7 +5,7 @@ import Member from './Member';
 
 function App() {
   
-  axios.get('http://chase.dothome.co.kr/admin/api/p_list.php')
+  axios.get('/admin/api/p_list.php')
   .then(res=>{
     console.log(res.data);
   })
@@ -14,9 +14,7 @@ function App() {
   return (
     <div className="App">
 
-      <iframe src="http://chase.dothome.co.kr/admin/board/bbs/board.php?bo_table=free" width="90%" height="1000" frameborder="0" >
-      </iframe>
-      <Member/>
+      
     </div>
   );
 }
