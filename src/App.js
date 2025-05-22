@@ -2,15 +2,17 @@ import logo from './logo.svg';
 import './App.css';
 import axios from 'axios';
 import Member from './Member';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 function App() {
   const [data,setData] = useState([]);
-  axios.get('/admin/api/p_list.php')
-  .then(res=>{
-    console.log(res.data);
-    setData(res.data);
-  })
+  useEffect(()=>{
+    axios.get('/admin/api/p_list.php')
+    .then(res=>{
+      console.log(res.data);
+      setData(res.data);
+    })
+  },[])
 
   if(!data.length) return;
 
