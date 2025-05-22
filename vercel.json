@@ -1,0 +1,9 @@
+{
+    "rewrites": [
+      {
+        "source": "/admin/api/:match*",
+        "destination": "http://chase.dothome.co.kr/admin/api/:match*"
+      }
+    ]
+  }
+  
