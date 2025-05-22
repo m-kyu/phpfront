@@ -18,7 +18,7 @@ function App() {
 
   return (
     <div className="App">
-      <img src={`http://chase.dothome.co.kr/admin/product/upload/${data[0].p_thumb}`} />
+      <img src={`/${data[0].p_thumb}`} />
 
       
     </div>
