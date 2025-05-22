@@ -8,6 +8,7 @@ function App() {
   const [data,setData] = useState([]);
   axios.get('/admin/api/p_list.php')
   .then(res=>{
+    console.log(res.data);
     setData(res.data);
   })
 
